@@ -1,3 +1,4 @@
+import os
 from _bsdopendirtype import ffi, lib
 
 
@@ -32,7 +33,7 @@ def opendir(dir):
                     raise _posix_error()
                 return
             name = ffi.string(dirent.d_name)
-            if name == b'.' or name == b'..':
+            if name in {b'.', b'..'}:
                 continue
             name = dirname + name
             try:

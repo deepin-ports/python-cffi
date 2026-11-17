@@ -8,7 +8,7 @@ if not sys.platform == 'win32':
 try:
     from _winclipboard_cffi import ffi, lib
 except ImportError:
-    print 'run winclipboard_build first, then make sure the shared object is on sys.path'
+    print('run winclipboard_build first, then make sure the shared object is on sys.path')
     sys.exit(1)
 
 # ffi "knows" about the declared variables and functions from the

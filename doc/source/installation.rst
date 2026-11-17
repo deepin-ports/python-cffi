@@ -10,14 +10,14 @@ Quick installation for CPython (cffi is distributed with PyPy):
 
 .. __: http://pypi.python.org/pypi/cffi
 
-In more details:
+In more detail:
 
 This code has been developed on Linux, but should work on any POSIX
 platform as well as on Windows 32 and 64.  (It relies occasionally on
 libffi, so it depends on libffi being bug-free; this may not be fully
 the case on some of the more exotic platforms.)
 
-CFFI is tested with CPython 3.8-3.13.
+CFFI is tested with CPython 3.10-3.15.
 
 The core speed of CFFI is better than ctypes, with import times being
 either lower if you use the post-1.0 features, or much higher if you
@@ -29,7 +29,7 @@ libraries on PyPy.
 
 Requirements:
 
-* CPython 3.8+, or PyPy (PyPy 2.0 for the earliest
+* CPython 3.10+, or PyPy (PyPy 2.0 for the earliest
   versions of CFFI; or PyPy 2.6 for CFFI 1.0).
 
 * in some cases you need to be able to compile C extension modules.
@@ -53,11 +53,11 @@ Download and Installation:
 * Or grab the most current version from `GitHub`_:
   ``git clone https://github.com/python-cffi/cffi``
 
-* running the tests: ``pytest  c/  testing/`` (if you didn't
-  install cffi yet, you need first ``python setup_base.py build_ext -f
+* running the tests: ``pytest c/ testing/`` (if you didn't
+  install cffi yet, you need to first run ``python setup_base.py build_ext -f
   -i``)
 
-.. _`GitHub project home`: https://github.com/python-cffi/cffi
+.. _`GitHub`: https://github.com/python-cffi/cffi
 
 Demos:
 
@@ -79,8 +79,8 @@ Platform-specific instructions
 ``libffi`` is notoriously messy to install and use --- to the point that
 CPython includes its own copy to avoid relying on external packages.
 CFFI does the same for Windows, but not for other platforms (which should
-have their own working libffi's).
-Modern Linuxes work out of the box thanks to ``pkg-config``.  Here are some
+have their own working libffi).
+Modern Linux distributions work out of the box thanks to ``pkg-config``.  Here are some
 (user-supplied) instructions for other platforms.
 
 

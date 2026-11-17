@@ -4,4 +4,4 @@ import sys, os
 from _pwuid_cffi import ffi, lib
 
 
-print ffi.string(lib.getpwuid(0).pw_name)
+print(ffi.string(lib.getpwuid(0).pw_name))

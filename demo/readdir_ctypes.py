@@ -44,7 +44,7 @@ closedir.restype = ctypes.c_int
 
 
 def walk(basefd, path):
-    print '{', path
+    print('{', path)
     dirfd = openat(basefd, path, 0)
     if dirfd < 0:
         # error in openat()
@@ -59,11 +59,11 @@ def walk(basefd, path):
         if not result:
             break
         name = dirent.d_name
-        print '%3d %s' % (dirent.d_type, name)
-        if dirent.d_type == 4 and name != '.' and name != '..':
+        print('%3d %s' % (dirent.d_type, name))
+        if dirent.d_type == 4 and name not in {'.', '..'}:
             walk(dirfd, name)
     closedir(dir)
-    print '}'
+    print('}')
 
 
 walk(-1, "/tmp")

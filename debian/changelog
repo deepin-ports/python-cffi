@@ -1,8 +1,52 @@
-python-cffi (1.17.1-3deepin1) unstable; urgency=medium
+python-cffi (2.1.1-2) unstable; urgency=medium
 
-  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+  * Team upload.
+  * Rebuilt for Python 3.15 support.
 
- -- tunaichao <tunaichao@uniontech.com>  Mon, 21 Sep 2026 16:04:50 +0800
+ -- Thomas Goirand <zigo@debian.org>  Sat, 24 Oct 2026 09:25:09 +0200
+
+python-cffi (2.1.1-1) unstable; urgency=medium
+
+  * Team Upload
+  * New upstream version 2.1.1
+  * Drop build-dep on python3-py (Closes: #1121670)
+  * Refresh bundled-wheel-and-setuptools.patch
+  * Drop pycparser-3.patch: applied upstream
+  * Add debian/salsa-ci.yml
+  * Bump Standards-Version to 4.7.4, drop Priority: tag
+  * Drop duplicate dependency on dh-python
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 17 Aug 2026 14:07:44 +0200
+
+python-cffi (2.0.0-3) unstable; urgency=medium
+
+  * Patch: Handle pycparser 3 in tests.
+
+ -- Stefano Rivera <stefanor@debian.org>  Tue, 03 Feb 2026 16:38:07 -0400
+
+python-cffi (2.0.0-2) unstable; urgency=medium
+
+  * Depend on python3-setuptools from the python3-cffi package. This is
+    required to compile C extensions in most cffi modes. (Closes: #1118162)
+  * Drop Rules-Requires-Root: no, as it's now the default.
+
+ -- Stefano Rivera <stefanor@debian.org>  Wed, 15 Oct 2025 22:22:15 +0200
+
+python-cffi (2.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop patch no-wheel-whl, superseded upstream.
+
+ -- Stefano Rivera <stefanor@debian.org>  Sun, 14 Sep 2025 20:02:12 +0200
+
+python-cffi (2.0.0~b1-1) unstable; urgency=medium
+
+  * New upstream beta.
+  * Refresh patches.
+  * Bump Standards-Version to 4.7.2, no changes needed.
+  * Bump copyright years.
+
+ -- Stefano Rivera <stefanor@debian.org>  Thu, 21 Aug 2025 13:11:59 +0200
 
 python-cffi (1.17.1-3) unstable; urgency=medium
 

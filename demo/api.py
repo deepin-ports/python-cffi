@@ -35,7 +35,7 @@ class PythonFFI(FFI):
         return lib
 
 
-class _PyExport(object):
+class _PyExport:
     def __init__(self, tp, func):
         self.tp = tp
         self.func = func
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     @ffi.pyexport("int(int)")
     def add1(n):
-        print n
+        print(n)
         return n + 1
 
     ffi.cdef("""

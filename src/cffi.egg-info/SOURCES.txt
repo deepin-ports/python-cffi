@@ -3,7 +3,6 @@ LICENSE
 MANIFEST.in
 README.md
 pyproject.toml
-setup.cfg
 setup.py
 setup_base.py
 demo/_curses.py
@@ -48,6 +47,7 @@ doc/misc/design.rst
 doc/misc/grant-cffi-1.0.rst
 doc/misc/parse_c_type.rst
 doc/source/cdef.rst
+doc/source/cffi-gen-src.rst
 doc/source/conf.py
 doc/source/embedding.rst
 doc/source/goals.rst
@@ -92,6 +92,7 @@ src/c/libffi_x86_x64/win64.asm
 src/c/libffi_x86_x64/win64.obj
 src/cffi/__init__.py
 src/cffi/_cffi_errors.h
+src/cffi/_cffi_gen_src.py
 src/cffi/_cffi_include.h
 src/cffi/_embedding.h
 src/cffi/_imp_emulation.py
@@ -103,6 +104,7 @@ src/cffi/commontypes.py
 src/cffi/cparser.py
 src/cffi/error.py
 src/cffi/ffiplatform.py
+src/cffi/gen_src.py
 src/cffi/lock.py
 src/cffi/model.py
 src/cffi/parse_c_type.h
@@ -158,6 +160,8 @@ testing/cffi0/snippets/setuptools_package_2/setup.py
 testing/cffi0/snippets/setuptools_package_2/snip_setuptools_verify2/__init__.py
 testing/cffi1/__init__.py
 testing/cffi1/test_cffi_binary.py
+testing/cffi1/test_cffi_gen_src.py
+testing/cffi1/test_cffi_gen_src_meson.py
 testing/cffi1/test_commontypes.py
 testing/cffi1/test_dlopen.py
 testing/cffi1/test_dlopen_unicode_literals.py
@@ -172,6 +176,23 @@ testing/cffi1/test_recompiler.py
 testing/cffi1/test_unicode_literals.py
 testing/cffi1/test_verify1.py
 testing/cffi1/test_zdist.py
+testing/cffi1/cffi_gen_src_examples/common/pyproject.toml
+testing/cffi1/cffi_gen_src_examples/common/src/csrc/square.c
+testing/cffi1/cffi_gen_src_examples/common/src/csrc/square.h
+testing/cffi1/cffi_gen_src_examples/common/src/squared/__init__.py
+testing/cffi1/cffi_gen_src_examples/exec_python_example/meson.build
+testing/cffi1/cffi_gen_src_examples/exec_python_example/pyproject.toml
+testing/cffi1/cffi_gen_src_examples/exec_python_example/src/csrc/square.c
+testing/cffi1/cffi_gen_src_examples/exec_python_example/src/csrc/square.h
+testing/cffi1/cffi_gen_src_examples/exec_python_example/src/squared/__init__.py
+testing/cffi1/cffi_gen_src_examples/exec_python_example/src/squared/_squared_build.py
+testing/cffi1/cffi_gen_src_examples/read_sources_example/meson.build
+testing/cffi1/cffi_gen_src_examples/read_sources_example/pyproject.toml
+testing/cffi1/cffi_gen_src_examples/read_sources_example/src/csrc/square.c
+testing/cffi1/cffi_gen_src_examples/read_sources_example/src/csrc/square.h
+testing/cffi1/cffi_gen_src_examples/read_sources_example/src/squared/__init__.py
+testing/cffi1/cffi_gen_src_examples/read_sources_example/src/squared/squared.cdef.txt
+testing/cffi1/cffi_gen_src_examples/read_sources_example/src/squared/squared.csrc.c
 testing/embedding/__init__.py
 testing/embedding/add1-test.c
 testing/embedding/add1.py

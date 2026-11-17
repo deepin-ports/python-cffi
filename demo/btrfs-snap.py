@@ -3,7 +3,6 @@ btrfs-snap.py: source target newname
 
 creates a exactly named snapshots and bails out if they exist
 """
-
 import argparse
 import fcntl
 import os
@@ -46,7 +45,7 @@ args.fd = source
 args_buffer = ffi.buffer(args)
 try:
     fcntl.ioctl(target, lib.BTRFS_IOC_SNAP_CREATE_V2, args_buffer)
-except IOError as e:
-    print e
+except OSError as e:
+    print(e)
     sys.exit(1)
 

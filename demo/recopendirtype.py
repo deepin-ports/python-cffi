@@ -1,3 +1,4 @@
+import os
 from _recopendirtype import ffi, lib
 
 
@@ -34,7 +35,7 @@ def opendir(dir):
             if result[0] == ffi.NULL:
                 return    # 
             name = ffi.string(dirent.d_name)
-            if name == b'.' or name == b'..':
+            if name in {b'.', b'..'}:
                 continue
             name = dirname + name
             try:
